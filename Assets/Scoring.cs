@@ -6,7 +6,10 @@ public class Scoring : MonoBehaviour
 {
 
     [SerializeField]
-    private UIManager _uiManager; 
+    private UIManager _uiManager;
+
+    public bool isRed;
+    public bool isBlue;
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +17,25 @@ public class Scoring : MonoBehaviour
         _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Point");
-        _uiManager.UpdateRedScore();
+        
+
+        if (isRed == true) {
+            if (other.gameObject.tag == "RedTeamBag")
+            {
+                Debug.Log("Point Red");
+                _uiManager.UpdateRedScore();
+            }
+        }
+
+        if (isBlue == true)
+        {
+            if (other.gameObject.tag == "BlueTeamBag")
+            {
+                Debug.Log("Point Blue");
+                _uiManager.UpdateBlueScore();
+            }
+        }
     }
 }
