@@ -16,13 +16,15 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        m_TextComponent = GetComponent<TMP_Text>();
+        //redScoreText = GetComponent<TextMeshProUGUI>();
+
+        redScore = 0;
+        blueScore = 0;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        m_TextComponent.text = string.Empty;
     }
 
     // Update is called once per frame
@@ -33,7 +35,13 @@ public class UIManager : MonoBehaviour
 
     public void UpdateRedScore()
     {
-        redScore += 1;
-        m_TextComponent.text = "Test" + redScore;
+        redScore += 3;
+        redScoreText.text = redScore.ToString();
+    }
+
+    public void UpdateBlueScore()
+    {
+        redScore += 3;
+        redScoreText.text = redScore.ToString();
     }
 }

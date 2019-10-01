@@ -5,8 +5,6 @@ using UnityEngine;
 public class Scoring : MonoBehaviour
 {
 
-    public bool enter = false;
-
     [SerializeField]
     private UIManager _uiManager; 
 
@@ -24,10 +22,7 @@ public class Scoring : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (enter)
-        {
-            Debug.Log("Point");
-            _uiManager.UpdateRedScore();
-        }
+        Debug.Log("Point");
+        _uiManager.UpdateRedScore();
     }
 }
