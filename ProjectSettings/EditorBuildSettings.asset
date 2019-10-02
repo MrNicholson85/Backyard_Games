@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cornhole.unity
     guid: 8f9eed2c7b864a543b0d7b4a19d11db7
+  - enabled: 1
+    path: Assets/Scenes/Test.unity
+    guid: ed937225d6c9742d8b630469966abd8f
   m_configObjects: {}
