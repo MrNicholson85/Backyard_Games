@@ -6,6 +6,10 @@ TagManager:
   tags:
   - BlueTeamBag
   - RedTeamBag
+  - BluePlayerOne
+  - BluePlayerTwo
+  - RedPlayerOne
+  - RedPlayerTwo
   layers:
   - Default
   - TransparentFX

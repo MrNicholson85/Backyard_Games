@@ -10,14 +10,17 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI redScoreText;
     public TextMeshProUGUI blueScoreText;
 
+    public GameObject RedTeamWins;
+    public GameObject BlueTeamWins;
+
+    public int FinalScore;
+
     public int redScore;
     public int blueScore;
 
 
     private void Start()
     {
-        //redScoreText = GetComponent<TextMeshProUGUI>();
-
         redScore = 0;
         blueScore = 0;
     }
@@ -25,7 +28,7 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        WinningTeam();
     }
 
     public void UpdateRedScore()
@@ -38,5 +41,22 @@ public class UIManager : MonoBehaviour
     {
         blueScore += 3;
         blueScoreText.text = blueScore.ToString();
+    }
+
+    public void WinningTeam()
+    {
+        if (redScore == FinalScore)
+        {
+            Debug.Log("Red Team Wins with a score of " + redScore.ToString());
+            RedTeamWins.SetActive(true);
+        }
+
+        if (blueScore == FinalScore)
+        {
+            Debug.Log("Blue Team Wins with a score " + blueScore.ToString());
+            BlueTeamWins.SetActive(true);
+
+
+        }
     }
 }
