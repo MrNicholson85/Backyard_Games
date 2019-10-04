@@ -19,33 +19,27 @@ public class OnBoardScoring : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-		if (stayCount >= 2.0f)
+		
+		Debug.Log("staying");
+
+		if (isRed == true)
 		{
-			Debug.Log("staying");
-
-			if (isRed == true)
+			if (other.gameObject.tag == "RedTeamBag")
 			{
-				if (other.gameObject.tag == "RedTeamBag")
-				{
-					Debug.Log("Point Red");
-					_uiManager.UpdateRedScore1();
-				}
-			}
-
-			if (isBlue == true)
-			{
-				if (other.gameObject.tag == "BlueTeamBag")
-				{
-					Debug.Log("Point Blue");
-					_uiManager.UpdateBlueScore1();
-				}
+				Debug.Log("Point Red");
+				_uiManager.UpdateRedScore1();
 			}
 		}
-		else
-		{
-			stayCount = stayCount + Time.deltaTime;
-		}
 
+		if (isBlue == true)
+		{
+			if (other.gameObject.tag == "BlueTeamBag")
+			{
+				Debug.Log("Point Blue");
+				_uiManager.UpdateBlueScore1();
+			}
+		}
+	
 		
     }
 }
