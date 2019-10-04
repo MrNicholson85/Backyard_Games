@@ -19,13 +19,11 @@ public class Scoring : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
         if (isRed == true) {
             if (other.gameObject.tag == "RedTeamBag")
             {
                 Debug.Log("Point Red");
-                _uiManager.UpdateRedScore();
+                _uiManager.UpdateRedScore3();
             }
         }
 
@@ -34,7 +32,7 @@ public class Scoring : MonoBehaviour
             if (other.gameObject.tag == "BlueTeamBag")
             {
                 Debug.Log("Point Blue");
-                _uiManager.UpdateBlueScore();
+                _uiManager.UpdateBlueScore3();
             }
         }
     }

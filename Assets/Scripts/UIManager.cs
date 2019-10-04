@@ -31,15 +31,27 @@ public class UIManager : MonoBehaviour
         WinningTeam();
     }
 
-    public void UpdateRedScore()
+    public void UpdateRedScore3()
     {
         redScore += 3;
         redScoreText.text = redScore.ToString();
     }
 
-    public void UpdateBlueScore()
+    public void UpdateRedScore1()
+    {
+        redScore += 1;
+        redScoreText.text = redScore.ToString();
+    }
+
+    public void UpdateBlueScore3()
     {
         blueScore += 3;
+        blueScoreText.text = blueScore.ToString();
+    }
+
+    public void UpdateBlueScore1()
+    {
+        blueScore += 1;
         blueScoreText.text = blueScore.ToString();
     }
 
