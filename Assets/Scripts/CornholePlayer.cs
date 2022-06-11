@@ -21,9 +21,9 @@ public class CornholePlayer : MonoBehaviour
 
     public void PlayerMenu()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three) || Input.GetKeyDown(KeyCode.Space))
-        {
-            playerUIMenu.SetActive(true);
-        }
+        // if (OVRInput.GetDown(OVRInput.Button.Three) || Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     playerUIMenu.SetActive(true);
+        // }
     }
 }
