@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3487256562780940148}
   - component: {fileID: 3487256562779841972}
   - component: {fileID: 1945659994067989845}
-  - component: {fileID: 1575702822691594824}
   - component: {fileID: 5838031321076446379}
   m_Layer: 0
   m_Name: RedTeamBag
@@ -57,6 +56,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1945659994067989845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94,23 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.58923656, y: 0.14681792, z: 0.3973254}
   m_Center: {x: -0.015023047, y: 0.06943452, z: 0.00408424}
---- !u!114 &1575702822691594824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3487256562777914228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!54 &5838031321076446379
 Rigidbody:
   m_ObjectHideFlags: 0
